@@ -793,9 +793,10 @@ a {
         align-items: center;
     }
     .discografia-lista__item {
+        margin-bottom: 5%;
         display: flex;
         flex-flow: column nowrap;
-        margin-bottom: 5%;
+        align-items: center;
     }
     .discografia-lista__item .img-container {
         width: 54%;
