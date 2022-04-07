@@ -293,7 +293,6 @@ a {
 /* Discografía */
 .discografia-lista {
     display: grid;
-    list-style: decimal inside;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
 }
@@ -302,21 +301,22 @@ a {
     margin: 1% 1%;
     padding: 2%;
     line-height: 1.5;
+    list-style: decimal inside;
     font-style: italic;
     position: relative;
     display: flex;
     flex-flow: row nowrap;
 }
-.discografia-lista .img-container {
+.discografia-lista__item .img-container {
     height: fit-content;
     width: 30%;
     position: relative;
     transition: transform .5s;
 }
-.discografia-lista .img-container:hover {
+.discografia-lista__item .img-container:hover {
     transform: scale(1.2);
 }
-.discografia-lista .img-container .btn {
+.discografia-lista__item .img-container .btn {
     display: none;
     position: absolute;
     top: 50%;
@@ -335,7 +335,7 @@ a {
     -ms-transform: translate(-50%, -50%);
     border: 1px solid #000;
 }
-.img-container:hover .btn {
+.discografia-lista__item .img-container:hover .btn {
     display: inline;
 }
 .discografia-lista__img {
@@ -775,8 +775,31 @@ a {
     .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         transform: rotate(-35deg);
     }
+    .logo--chico {
+        font-size: 1.2292em;
+    }
+    .logo--chico h1 a {
+        line-height: 35px;
+    }
     .pageTitle {
-        font-size: 2em;
+        font-size: 1.4792em;
+    }
+    .noticias__articulo {
+        flex-direction: column-reverse;
+    }
+    .discografia-lista {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .discografia-lista__item {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 5%;
+    }
+    .discografia-lista__item .img-container {
+        width: 54%;
+        margin-bottom: 5%;
     }
     .galeria__imgs {
         grid-template-rows: 33% 33% 33%;
@@ -785,9 +808,6 @@ a {
     }
     .galeria__imgs div:nth-child(1) {
         grid-column: 1 / 2;
-    }
-    .noticias__articulo {
-        flex-direction: column-reverse;
     }
 }
 
