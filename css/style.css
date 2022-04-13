@@ -45,67 +45,100 @@ a {
 .grid-content {
     padding-bottom: 2.5em;
 }
-
+.containerPropio {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
 
 
 /* Encabezado */
-.header {
-    padding: 6% 0;
-    background-image: url(../img/bckg2-816x408.jpg);
-    background-position-y: 68%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 58%;
-    max-height: 75%;
-    margin-bottom: 5%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+.logo--chico {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-weight: 1000;
+    font-size: 1.9792rem;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 1px #000000;
+    width: fit-content;
+    height: 100%;
 }
-/* .header--chico {
-    background-image: url(../img/bckg2-816x408.jpg);  LOS ELEMENTOS DE ENCABEZADO APARECEN EN EL APARTADO DE LA GALERÍA
-    background-position-y: 100%;                      ME PARECIÓ (UN POCO) MÁS CLARO DEJAR TODO ESTO COMENTADO Y AGREGAR
-    background-size: 100%;                            LAS PROPIEDADES CORRESPONDIENTES AHÍ PARA NO MEZCLARME DEMASIADO
+.logo--chico h1 {
+    width: 100%;
+    height: 100%;
+}
+.logo--chico h1 a{    
+    height: 100%;
+    line-height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo--color1 {
+    color: #004E7C;
+}
+.logo--color2 {
+    color: #B73225;
+}
+.navbar {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    width: 100%;
+    background: #fff;
+    background-image: url(../img/bckg2-816x408.jpg);
+    background-position-y: 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
+    opacity: 0.85;
+    height: 150px;
     max-height: 170px;
+    z-index: 12;
     width: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     grid-area: header;
     align-items: flex-start;
-} */
-.logo {
-    font-family: 'Bodoni Moda', serif;
-    font-style: italic;
-    font-weight: 1000;
-    font-size: 3.1875em;
-    text-shadow: 0 0 1px #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: -22%;
-    line-height: 95%;
-}
 
-/* .header__navbar {
-    width: fit-content;
-    justify-content: center;   
 }
-.header__navbar ul li {
-    height: auto;
-    width: auto;
-    margin: 0 4%;
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.menu-items {
+    order: 2;
+    display: flex;
+}
+.menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.4792rem;
     border-radius: 6px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-size: 20px;
     line-height: 35px;
     text-transform: uppercase;
     align-items: center;
     color: #ffffff;
     text-shadow: 0 0 24px #070000; 
-} */
+
+}
+.menu-items a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+.menu-items a:hover {
+    color: #b73225;
+    transition: color 0.3s ease-in-out;
+}
  /* Fin encabezado */
 
  
@@ -117,7 +150,7 @@ a {
     grid-area: principal;
 }
 .pageTitle {
-    font-size: 3.1875em;
+    font-size: 3.1875rem;
     font-style: italic;
     text-transform: lowercase;
     text-shadow: 0 0 #000;
@@ -128,18 +161,6 @@ a {
     letter-spacing: 0.1em;
     text-align: center;
     margin-bottom: 0.3em;
-}
-.pageTitle--chica {
-    text-align: center;
-    margin: 4% 0%;
-    font-size: 1.9792em;
-    font-style: italic;
-    text-transform: lowercase;
-    font-family: 'Bodoni Moda' , serif;
-    border-bottom: 3px solid #111;
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: 0.1em;
 }
 .pageTitle h1, .pageTitle h2 {
     padding: 0.3em;
@@ -167,13 +188,13 @@ a {
     margin-right: 36px;
 }
 .noticias__articulo--titulo {
-    font-size: 1.4792em;
+    font-size: 1.4792rem;
     font-weight: 800;
     margin: 30px;
 }
 .noticias__articulo--cuerpo {
     font-style: italic;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
     text-align: justify;
@@ -181,7 +202,7 @@ a {
 }
 .noticias__articulo--txt a {
     font-weight: 300;
-    font-size: 0.9167em;
+    font-size: 0.9167rem;
 }
 .noticias__articulo--img {
     width: 100%;
@@ -190,6 +211,11 @@ a {
 /* Final de Sec. Noticias */
 
 /* sidebar */
+.aside {
+    grid-area: sidebar;
+    display: flex;
+    align-items: center;
+}
 .sidebar {
     background-color: #004e7cc7;
     height: auto;
@@ -203,21 +229,20 @@ a {
     color: #ffffff;
     overflow: auto;
     align-self: center;
-    grid-area: sidebar;
 }
-.sidebar::-webkit-scrollbar {
+.aside::-webkit-scrollbar, .sidebar::-webkit-scrollbar {
     width: 8px;     
     height: 8px;
 }
-.sidebar::-webkit-scrollbar-thumb {
+.aside::-webkit-scrollbar-thumb, .sidebar::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 4px;
 }
-.sidebar::-webkit-scrollbar-thumb:hover {
+.aside::-webkit-scrollbar-thumb:hover, .sidebar::-webkit-scrollbar-thumb:hover {
     background: #b3b3b3;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
-.sidebar::-webkit-scrollbar-thumb:active {
+.aside::-webkit-scrollbar-thumb:active, .sidebar::-webkit-scrollbar-thumb:active {
     background-color: #999999;
 }
 
@@ -228,7 +253,7 @@ a {
 .sidebar ul {
     line-height: 1.5em;
     list-style: inside;
-    font-size: 0.8333em;
+    font-size: 0.8333rem;
     font-weight: 350;
     padding: 0.5em;
 }
@@ -329,7 +354,7 @@ a {
     color: #FFF;
     background-color: #0b427a;
     font-family: Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     padding: 12px 24px;
@@ -389,101 +414,6 @@ a {
 /* GALERÍA DE PRUEBA */
 
 
-.containerPropio {
-    max-width: 1200px;
-    width: 90%;
-    margin: auto;
-}
-.logo--chico {
-    font-family: 'Bodoni Moda', serif;
-    font-style: italic;
-    font-weight: 1000;
-    font-size: 1.9792em;
-    margin-bottom: 0.5em;
-    text-shadow: 0 0 1px #000000;
-    width: fit-content;
-    height: 100%;
-}
-.logo--chico h1 {
-    width: 100%;
-    height: 100%;
-}
-.logo--chico h1 a{    
-    height: 100%;
-    line-height: 55px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.logo--color1 {
-    color: #004E7C;
-}
-.logo--color2 {
-    color: #B73225;
-}
-.navbar {
-    box-shadow: 0px 5px 10px 0px #aaa;
-    width: 100%;
-    background: #fff;
-    background-image: url(../img/bckg2-816x408.jpg);
-    background-position-y: 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    opacity: 0.85;
-    height: 150px;
-    max-height: 170px;
-    z-index: 12;
-    width: auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    grid-area: header;
-    align-items: flex-start;
-
-}
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines {
-    display: none;
-}
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    height: 64px;
-    align-items: center;
-}
-  
-.menu-items {
-    order: 2;
-    display: flex;
-}
-
-.menu-items li {
-    list-style: none;
-    margin-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.4792em;
-    border-radius: 6px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    line-height: 35px;
-    text-transform: uppercase;
-    align-items: center;
-    color: #ffffff;
-    text-shadow: 0 0 24px #070000; 
-
-}
-
-.menu-items a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-}
-
-.menu-items a:hover {
-    color: #b73225;
-    transition: color 0.3s ease-in-out;
-}
   
 .galeria-background {
     background-image: url(../img/galeria-bckg1.jpg);
@@ -531,7 +461,7 @@ a {
     grid-template-rows: 1fr 1fr;
     gap: 5px;
 }
-.galeria__imgs div:nth-child(1) {
+.galeria__imgs div:nth-child(1), .galeria__imgs div:nth-child(2)  {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
 }
@@ -553,24 +483,19 @@ a {
         position: relative;
         height: auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto;
         grid-template-rows: auto 3fr auto;
         gap: 5px 5px;
         grid-template-areas:
-            "header header"
-            "principal principal"
-            "footer footer";   
+            "header"
+            "principal"
+            "footer";   
     }
     .menu-items li {
         margin: 0 0.4em;
     }
-    .sidebar {
+    .aside {
         display: none;
-    }
-    .sidebar ul {
-        line-height: 1.4em;
-        font-size: 0.7rem;
-        padding: none;
     }
     .galeria__imgs {
         grid-template-columns: auto auto;
@@ -599,6 +524,9 @@ a {
         margin-left: -40px;
         padding-left: 50px;
 
+    }
+    .menu-items a {
+        transition: none;
     }
     .navbar {
         opacity: 0.95;
@@ -683,6 +611,16 @@ a {
     .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         transform: rotate(-35deg);
     }
+    .discografia-lista__item {
+        margin-bottom: 5%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+    .discografia-lista__item ol {
+        padding-left: 0;
+    }
+
 }
 
 @media screen and (max-width: 480px) { 
@@ -707,6 +645,9 @@ a {
         margin-left: -40px;
         padding-left: 50px;
 
+    }
+    .menu-items a {
+        transition: none;
     }
     .navbar {
         opacity: 0.95;
@@ -792,13 +733,13 @@ a {
         transform: rotate(-35deg);
     }
     .logo--chico {
-        font-size: 1.2292em;
+        font-size: 1.2292rem;
     }
     .logo--chico h1 a {
         line-height: 35px;
     }
     .pageTitle {
-        font-size: 1.4792em;
+        font-size: 1.4792rem;
     }
     .noticias__articulo {
         flex-direction: column-reverse;
@@ -814,6 +755,9 @@ a {
         flex-flow: column nowrap;
         align-items: center;
     }
+    .discografia-lista__item ol {
+        padding-left: 0;
+    }
     .discografia-lista__item .img-container {
         width: 54%;
         margin-bottom: 5%;
@@ -823,12 +767,15 @@ a {
     }
     
     .galeria__imgs {
-        grid-template-rows: 33% 33% 33%;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: auto auto;
         max-width: 400px;
     }
     .galeria__imgs div:nth-child(1) {
         grid-column: 1 / 2;
+    }
+    .galeria__imgs__item:hover {
+        filter: grayscale(1);
     }
 }
 
