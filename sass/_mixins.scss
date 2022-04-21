@@ -1,0 +1,6 @@
+/* MIXINS */
+@mixin fuenteTitulo {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    text-transform: lowercase;
+}

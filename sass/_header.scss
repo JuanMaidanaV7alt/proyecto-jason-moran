@@ -26,11 +26,10 @@
         justify-content: space-between;
 
         .logo {
+            @include fuenteTitulo;
             width: 100%;
             height: auto;
             font-size: 4.1875rem;
-            font-family: 'Bodoni Moda', serif;
-            font-style: italic;
             font-weight: 900;
             text-shadow: 0 0 1px #000000;
             padding-left: 3rem;

@@ -1,0 +1,351 @@
+/* MEDIA QUERIES */
+
+/* TABLETS */
+
+@media screen and (max-width: 991px) {
+
+    /* general */
+    .grid-container {
+        position: relative;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 3fr auto;
+        gap: 5px 5px;
+        grid-template-areas:
+            "header"
+            "principal"
+            "footer";
+    }
+
+    /* header */
+    .navbar {
+        height: auto;
+    }
+
+    .menu-items li {
+        margin: 0 0.4em;
+    }
+
+    /* aside */
+    .aside {
+        display: none;
+    }
+
+    /* galeria */
+    .galeria__imgs {
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .galeria-background {
+        grid-area: principal;
+    }
+}
+
+
+/* MÓVILES PEQUEÑOS */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    /* general */
+    .pageTitle {
+        margin-top: 5em;
+    }
+
+    /* header */
+    .navbar {
+        box-shadow: $sombreadoHeaderChico;
+        opacity: 1;
+        height: 82px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+
+        .navbar-container {
+            display: block;
+            position: relative;
+            height: 100%;
+
+            .logo {
+                font-size: 3.1875rem;
+                padding-left: 2rem;
+
+                a {
+                    flex-direction: row;
+                    justify-content: flex-start;
+                }
+
+                &--color1 {
+                    margin-right: 1rem;
+                }
+            }
+
+            button input[type="checkbox"] {
+                display: block;
+                position: absolute;
+                display: block;
+                height: 32px;
+                width: 30px;
+                top: 20px;
+                right: 20px;
+                z-index: 5;
+                opacity: 0;
+
+                &:checked~.hamburger-lines {
+
+                    .line1 {
+                        transform: rotate(35deg);
+                    }
+
+                    .line2 {
+                        transform: scaleY(0);
+                    }
+
+                    .line3 {
+                        transform: rotate(-35deg);
+                    }
+                }
+            }
+
+            button .hamburger-lines {
+                display: block;
+                display: block;
+                height: 23px;
+                width: 35px;
+                position: absolute;
+                top: 17px;
+                right: 20px;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .line {
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: #333;
+                }
+
+                .line1 {
+                    transform-origin: 0% 0%;
+                    transition: transform 0.4s ease-in-out;
+                }
+
+                .line2 {
+                    transition: transform 0.2s ease-in-out;
+                }
+
+                .line3 {
+                    transform-origin: 0% 100%;
+                    transition: transform 0.4s ease-in-out;
+                }
+            }
+
+            .navbar-collapse {
+                background-color: #0d5781;
+                width: 70%;
+                height: 70vh;
+
+                .navbar-nav {
+                    order: 2;
+                    margin-left: 0;
+                    padding-left: 1rem;
+                    height: 100%;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+
+    /* discografia */
+    .discografia-lista__item {
+        margin-bottom: 5%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+
+        ol {
+            padding-left: 0;
+        }
+    }
+
+}
+
+
+/* MÓVILES PEQUEÑOS */
+
+@media screen and (max-width: 480px) {
+    /* general */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 2fr auto;
+    }
+
+    .pageTitle {
+        font-size: 1.4792rem;
+    }
+
+    /* header */
+    .navbar {
+        box-shadow: $sombreadoHeaderChico;
+        height: 68px;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+
+        .navbar-container {
+            display: block;
+            position: relative;
+            height: 100%;
+
+            .logo {
+                font-size: 2.1875rem;
+                padding-left: 1.5rem;
+
+                a {
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    .logo--color1 {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .navbar-toggler {
+                display: block;
+
+                input[type="checkbox"] {
+                    display: block;
+                    position: absolute;
+                    display: block;
+                    height: 32px;
+                    width: 30px;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 5;
+                    opacity: 0;
+
+                    &:checked~.hamburger-lines {
+                        .line1 {
+                            transform: rotate(35deg);
+                        }
+
+                        .line2 {
+                            transform: scaleY(0);
+                        }
+
+                        .line3 {
+                            transform: rotate(-35deg);
+                        }
+                    }
+                }
+
+                .hamburger-lines {
+                    display: block;
+                    display: block;
+                    height: 23px;
+                    width: 35px;
+                    position: absolute;
+                    top: 17px;
+                    right: 20px;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .line {
+                        display: block;
+                        height: 4px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background: #333;
+                    }
+
+                    .line1 {
+                        transform-origin: 0% 0%;
+                        transition: transform 0.4s ease-in-out;
+                    }
+
+                    .line2 {
+                        transition: transform 0.2s ease-in-out;
+                    }
+
+                    .line3 {
+                        transform-origin: 0% 100%;
+                        transition: transform 0.4s ease-in-out;
+                    }
+                }
+            }
+
+            .navbar-collapse {
+                background-color: #0d5781;
+                width: 70%;
+                height: 70vh;
+
+                .navbar-nav {
+                    order: 2;
+                    margin-left: 0;
+                    padding-left: 1rem;
+                    height: 100%;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+
+    /* noticias */
+    .noticias__articulo {
+        flex-direction: column-reverse;
+    }
+    
+    /* discografia */
+    .discografia-lista {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        &__item {
+            margin-bottom: 5%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            ol {
+                padding-left: 0;
+            }
+
+            .img-container {
+                width: 54%;
+                margin-bottom: 5%;
+
+                &:hover {
+                    transform: none;
+                }
+            }
+        }
+    }
+    /* galeria */
+    .galeria__imgs {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: auto auto;
+        max-width: 400px;
+
+        div:nth-child(1) {
+            grid-column: 1 / 2;
+        }
+        
+        &__item:hover {
+            filter: grayscale(1);
+        }
+    }
+
+
+}
