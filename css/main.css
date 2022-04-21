@@ -23,6 +23,9 @@ a {
   color: inherit;
 }
 
+/* VARIABLES */
+/* SECCIONES COMUNES A TODAS LAS PÁGINAS */
+/* CÓDIGO GENERAL */
 .grid-container {
   position: relative;
   height: 100vh;
@@ -80,7 +83,7 @@ a {
   font-size: 3.5rem;
 }
 
-/* Encabezado */
+/* ENCABEZADO */
 .navbar {
   -webkit-box-shadow: 0px 5px 10px 0px #aaa;
           box-shadow: 0px 5px 10px 0px #aaa;
@@ -209,8 +212,141 @@ a {
   transition: color 0.3s ease-in-out;
 }
 
-/* Fin encabezado */
-/* Sección de noticias */
+/* SIDEBAR */
+.aside {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: sidebar;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 10em 0;
+}
+
+.aside::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.aside::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.aside::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  -webkit-box-shadow: 0 0 2px 1px #00000033;
+          box-shadow: 0 0 2px 1px #00000033;
+}
+
+.aside::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+.aside .sidebar {
+  background-color: #004e7cc7;
+  height: auto;
+  max-height: 500px;
+  border: 5px double rgba(0, 0, 0, 0.15);
+  border-radius: 15px 10px 10px 15px;
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0;
+  top: 0;
+  text-align: justify;
+  color: #ffffff;
+  overflow: auto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.aside .sidebar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.aside .sidebar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.aside .sidebar::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  -webkit-box-shadow: 0 0 2px 1px #00000033;
+          box-shadow: 0 0 2px 1px #00000033;
+}
+
+.aside .sidebar::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+.aside .sidebar h4 {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.aside .sidebar ul {
+  line-height: 1.5em;
+  list-style: inside;
+  font-size: 0.8333rem;
+  font-weight: 400;
+  padding: 0.5em;
+}
+
+.aside .sidebar ul li {
+  margin: 1em 0;
+}
+
+/* FOOTER */
+.footer {
+  left: 0;
+  background-color: #004e7c;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  height: 6rem;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+
+.footer div {
+  height: inherit;
+}
+
+.footer div .footer__rrss {
+  font-weight: 600;
+  width: -webkit-fill-available;
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  list-style: none;
+}
+
+.footer div .footer__rrss .footer__rrss--item {
+  margin: 0px 16px;
+  letter-spacing: 5px;
+}
+
+/* SECCIONES PARTICULARES */
+/* NOTICIAS */
 .noticias {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,143 +409,7 @@ a {
   max-height: 100%;
 }
 
-/* Final de Sec. Noticias */
-/* sidebar */
-.aside {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: sidebar;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 10em 0;
-}
-
-.aside::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.aside::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-.aside::-webkit-scrollbar-thumb:hover {
-  background: #b3b3b3;
-  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.aside::-webkit-scrollbar-thumb:active {
-  background-color: #999999;
-}
-
-.aside .sidebar {
-  background-color: #004e7cc7;
-  height: auto;
-  max-height: 500px;
-  border: 5px double rgba(0, 0, 0, 0.15);
-  border-radius: 15px 10px 10px 15px;
-  position: -webkit-sticky;
-  position: sticky;
-  right: 0;
-  top: 0;
-  text-align: justify;
-  color: #ffffff;
-  overflow: auto;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.aside .sidebar::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.aside .sidebar::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-.aside .sidebar::-webkit-scrollbar-thumb:hover {
-  background: #b3b3b3;
-  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.aside .sidebar::-webkit-scrollbar-thumb:active {
-  background-color: #999999;
-}
-
-.aside .sidebar h4 {
-  text-align: center;
-  padding-top: 1em;
-}
-
-.aside .sidebar ul {
-  line-height: 1.5em;
-  list-style: inside;
-  font-size: 0.8333rem;
-  font-weight: 400;
-  padding: 0.5em;
-}
-
-.aside .sidebar ul li {
-  margin: 1em 0;
-}
-
-/* Fin de sidebar */
-/* Pie de página */
-.footer {
-  left: 0;
-  background-color: #004e7c;
-  width: -moz-available;
-  width: -webkit-fill-available;
-  width: fill-available;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  position: absolute;
-  bottom: 0;
-  height: 6rem;
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: footer;
-}
-
-.footer div {
-  height: inherit;
-}
-
-.footer div .footer__rrss {
-  font-weight: 600;
-  width: -webkit-fill-available;
-  width: 100%;
-  height: 100%;
-  padding: 0 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  list-style: none;
-}
-
-.footer div .footer__rrss .footer__rrss--item {
-  margin: 0px 16px;
-  letter-spacing: 5px;
-}
-
-/* Fin Pie de Página */
-/* Biografía */
+/* BIOGRAFIA */
 .biografia {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,8 +434,7 @@ a {
   height: auto;
 }
 
-/* Fin Biografía */
-/* Discografía */
+/* DISCOGRAFIA */
 .discografia-lista {
   display: -ms-grid;
   display: grid;
@@ -516,8 +515,7 @@ a {
   padding-left: 2em;
 }
 
-/* Final discografía */
-/* Contacto */
+/* CONTACTO */
 .contacto {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -554,8 +552,7 @@ a {
   font-size: .85rem;
 }
 
-/* Final contacto */
-/* GALERÍA DE PRUEBA */
+/* GALERIA */
 .galeria-background {
   background-image: url(../img/galeria-bckg1.jpg);
   background-size: cover;
@@ -587,8 +584,8 @@ a {
   overflow: hidden;
   padding-top: 56.25%;
   position: relative;
-  -webkit-box-shadow: 2px 7px 11px 1px #000000ba;
-          box-shadow: 2px 7px 11px 1px #000000ba;
+  -webkit-box-shadow: 2px 7px 11px 1px #00000059;
+          box-shadow: 2px 7px 11px 1px #00000059;
 }
 
 .galeria .galeria__vids .galeria__vids__item iframe {
@@ -649,8 +646,7 @@ a {
           filter: none;
 }
 
-/* Fin Galería */
-/* Media Queries */
+/* MEDIA QUERIES */
 @media screen and (max-width: 991px) {
   .grid-container {
     position: relative;

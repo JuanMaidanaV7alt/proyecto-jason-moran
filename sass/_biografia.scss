@@ -1,0 +1,21 @@
+/* BIOGRAFIA */
+.biografia {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 2em;
+    text-align: justify;
+
+    .biografia--txt {
+        margin: 3% 0;
+        font-size: 1.15rem;
+        line-height: 1.5;
+    }
+
+    .img-container {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

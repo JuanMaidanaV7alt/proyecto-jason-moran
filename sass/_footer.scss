@@ -1,0 +1,35 @@
+/* FOOTER */
+.footer {
+    left: 0;
+    background-color: #004e7c;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    height: 6rem;
+    grid-area: footer;
+
+    div {
+        height: inherit;
+
+        .footer__rrss {
+            font-weight: 600;
+            width: -webkit-fill-available;
+            width: 100%;
+            height: 100%;
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            list-style: none;
+
+            .footer__rrss--item {
+                margin: 0px 16px;
+                letter-spacing: 5px;
+            }
+        }
+    }
+}

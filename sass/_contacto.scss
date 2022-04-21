@@ -1,0 +1,28 @@
+/* CONTACTO */
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: principal;
+
+    >.row section {
+        background-color: #a5a9ac;
+
+        >h2 {
+            font-family: 'Bodoni Moda', serif;
+            font-style: italic;
+            text-transform: lowercase;
+            text-align: center;
+        }
+
+        .card-title {
+            h3 {
+                font-size: 1.1875rem;
+            }
+        }
+
+        .list-group-item {
+            font-size: .85rem;
+        }
+    }
+}

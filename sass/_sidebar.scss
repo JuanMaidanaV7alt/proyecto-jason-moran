@@ -1,0 +1,77 @@
+/* SIDEBAR */
+.aside {
+    grid-area: sidebar;
+    display: flex;
+    align-items: flex-start;
+    padding: 10em 0;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+
+        &:hover {
+            background: #b3b3b3;
+            box-shadow: 0 0 2px 1px #00000033;
+        }
+
+        &:active {
+            background-color: #999999;
+        }
+    }
+
+    .sidebar {
+        background-color: #004e7cc7;
+        height: auto;
+        max-height: 500px;
+        border: 5px double rgba(0, 0, 0, 0.15);
+        border-radius: 15px 10px 10px 15px;
+        position: sticky;
+        right: 0;
+        top: 0;
+        text-align: justify;
+        color: #ffffff;
+        overflow: auto;
+        align-self: flex-start;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+
+            &:hover {
+                background: #b3b3b3;
+                box-shadow: 0 0 2px 1px #00000033;
+            }
+
+            &:active {
+                background-color: #999999;
+            }
+        }
+
+        h4 {
+            text-align: center;
+            padding-top: 1em;
+        }
+
+        ul {
+            line-height: 1.5em;
+            list-style: inside;
+            font-size: 0.8333rem;
+            font-weight: 400;
+            padding: 0.5em;
+
+            li {
+                margin: 1em 0;
+            }
+        }
+    }
+}

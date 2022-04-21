@@ -1,0 +1,66 @@
+/* DISCOGRAFIA */
+.discografia-lista {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+
+    .discografia-lista__item {
+        width: 100%;
+        margin: 1% 1%;
+        padding: 2%;
+        line-height: 1.5;
+        list-style: decimal inside;
+        font-style: italic;
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+
+        .img-container {
+            height: fit-content;
+            width: 30%;
+            position: relative;
+            transition: transform .5s;
+
+            .discografia-lista__img {
+                height: auto;
+                width: 100%;
+                margin-right: 0.5em;
+                box-shadow: 2px 7px 11px 1px #00000059;
+                transition: all 1s;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+
+                .btn {
+                    display: inline;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -o-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
+
+                .discografia-lista__img {
+                    opacity: .85;
+                }
+            }
+
+            .btn {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-family: Helvetica, sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                transition: all 1s;
+            }
+        }
+
+        ol {
+            padding-left: 2em;
+        }
+    }
+}
