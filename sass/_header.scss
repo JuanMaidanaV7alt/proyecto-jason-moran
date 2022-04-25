@@ -7,7 +7,7 @@
     background-position-y: 100%;
     background-size: 100%;
     background-repeat: no-repeat;
-    opacity: 0.85;
+    opacity: 0.95;
     height: 150px;
     max-height: 170px;
     z-index: 12;
@@ -43,11 +43,11 @@
             }
 
             &--color1 {
-                color: #004E7C;
+                color: $colorAzul;
             }
 
             &--color2 {
-                color: #B73225;
+                color: $colorRojo;
             }
         }
 
@@ -80,7 +80,7 @@
                         transition: color 0.3s ease-in-out;
 
                         &:hover {
-                            color: #b73225;
+                            color: $colorRojo;
                             transition: color 0.3s ease-in-out;
                         }
                     }

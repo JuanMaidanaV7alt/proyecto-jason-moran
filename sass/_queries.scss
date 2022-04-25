@@ -55,7 +55,7 @@
     /* header */
     .navbar {
         box-shadow: $sombreadoHeaderChico;
-        opacity: 1;
+        opacity: 0.98;
         height: 82px;
         position: fixed;
         top: 0;
@@ -146,7 +146,7 @@
             }
 
             .navbar-collapse {
-                background-color: #0d5781;
+                background-color: $colorAzul;
                 width: 70%;
                 height: 70vh;
 
@@ -193,7 +193,7 @@
     .navbar {
         box-shadow: $sombreadoHeaderChico;
         height: 68px;
-        opacity: 1;
+        opacity: 0.98;
         position: fixed;
         top: 0;
         right: 0;
@@ -286,7 +286,7 @@
             }
 
             .navbar-collapse {
-                background-color: #0d5781;
+                background-color: $colorAzul;
                 width: 70%;
                 height: 70vh;
 
