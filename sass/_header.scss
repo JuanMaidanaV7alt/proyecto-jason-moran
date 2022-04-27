@@ -26,12 +26,10 @@
         justify-content: space-between;
 
         .logo {
-            @include fuenteTitulo;
+            @include fuenteTitulo(900, 0 0 1px #000000);
             width: 100%;
             height: auto;
             font-size: 4.1875rem;
-            font-weight: 900;
-            text-shadow: 0 0 1px #000000;
             padding-left: 3rem;
 
             a {

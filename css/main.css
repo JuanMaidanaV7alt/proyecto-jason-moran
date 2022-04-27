@@ -2,6 +2,8 @@
 /* VARIABLES */
 /* colores */
 /* MIXINS */
+/* general */
+/* header */
 /* ELEMENTOS COMUNES A TODAS LAS PÁGINAS */
 /* CÓDIGO GENERAL */
 * {
@@ -70,12 +72,12 @@ a {
 .pageTitle {
   font-family: 'Bodoni Moda', serif;
   font-style: italic;
+  font-weight: 800;
   text-transform: lowercase;
+  text-shadow: 0 0 #000;
   margin: 3em 0 4em 0;
   padding-bottom: 0.5em;
   border-bottom: 3px solid #111;
-  text-shadow: 0 0 #000;
-  font-weight: 800;
   line-height: 1;
   letter-spacing: 0.1em;
   text-align: center;
@@ -136,12 +138,12 @@ a {
 .navbar .navbar-container .logo {
   font-family: 'Bodoni Moda', serif;
   font-style: italic;
+  font-weight: 900;
   text-transform: lowercase;
+  text-shadow: 0 0 1px #000000;
   width: 100%;
   height: auto;
   font-size: 4.1875rem;
-  font-weight: 900;
-  text-shadow: 0 0 1px #000000;
   padding-left: 3rem;
 }
 
@@ -543,7 +545,9 @@ a {
 .contacto > .row section > h2 {
   font-family: 'Bodoni Moda', serif;
   font-style: italic;
+  font-weight: 800;
   text-transform: lowercase;
+  text-shadow: none;
   text-align: center;
 }
 
@@ -745,8 +749,6 @@ a {
             transform: rotate(-35deg);
   }
   .navbar .navbar-container button .hamburger-lines {
-    display: block;
-    display: block;
     height: 23px;
     width: 35px;
     position: absolute;
@@ -901,8 +903,6 @@ a {
             transform: rotate(-35deg);
   }
   .navbar .navbar-container .navbar-toggler .hamburger-lines {
-    display: block;
-    display: block;
     height: 23px;
     width: 35px;
     position: absolute;
@@ -967,7 +967,7 @@ a {
             justify-content: space-evenly;
   }
   /* noticias */
-  .noticias__articulo {
+  .noticias .noticias__articulo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;

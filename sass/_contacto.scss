@@ -9,9 +9,7 @@
         background-color: #a5a9ac;
 
         >h2 {
-            font-family: 'Bodoni Moda', serif;
-            font-style: italic;
-            text-transform: lowercase;
+            @include fuenteTitulo;
             text-align: center;
         }
 

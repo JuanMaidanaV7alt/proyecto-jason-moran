@@ -61,12 +61,10 @@ a {
 }
 
 .pageTitle {
-    @include fuenteTitulo;
+    @include fuenteTitulo(800, 0 0 #000);
     margin: 3em 0 4em 0;
     padding-bottom: 0.5em;
     border-bottom: 3px solid #111;
-    text-shadow: 0 0 #000;
-    font-weight: 800;
     line-height: 1;
     letter-spacing: 0.1em;
     text-align: center;

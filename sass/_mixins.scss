@@ -1,6 +1,19 @@
 /* MIXINS */
-@mixin fuenteTitulo {
+
+/* general */
+@mixin fuenteTitulo ($peso:800, $sombreado:none) {
     font-family: 'Bodoni Moda', serif;
     font-style: italic;
+    font-weight: $peso;
     text-transform: lowercase;
+    text-shadow: $sombreado;
+}
+
+/* header */
+@mixin menuColapsable {
+    background-color: $colorAzul;
+    background: radial-gradient(circle, #0064c2fa 0%, #11468ff9 100%);
+    width: 70%;
+    height: 70vh;
+
 }

@@ -110,8 +110,6 @@
             }
 
             button .hamburger-lines {
-                display: block;
-                display: block;
                 height: 23px;
                 width: 35px;
                 position: absolute;
@@ -146,10 +144,7 @@
             }
 
             .navbar-collapse {
-                background-color: $colorAzul;
-                background: radial-gradient(circle, #0064c2fa 0%, #11468ff9 100%);
-                width: 70%;
-                height: 70vh;
+                @include menuColapsable;
 
                 .navbar-nav {
                     order: 2;
@@ -250,8 +245,6 @@
                 }
 
                 .hamburger-lines {
-                    display: block;
-                    display: block;
                     height: 23px;
                     width: 35px;
                     position: absolute;
@@ -287,10 +280,7 @@
             }
 
             .navbar-collapse {
-                background-color: $colorAzul;
-                background: radial-gradient(circle, #0064c2fa 0%, #11468ff9 100%);
-                width: 70%;
-                height: 70vh;
+                @include menuColapsable;
 
                 .navbar-nav {
                     order: 2;
@@ -304,8 +294,11 @@
     }
 
     /* noticias */
-    .noticias__articulo {
-        flex-direction: column-reverse;
+    .noticias {
+
+        & &__articulo {
+            flex-direction: column-reverse;
+        }
     }
     
     /* discografia */
