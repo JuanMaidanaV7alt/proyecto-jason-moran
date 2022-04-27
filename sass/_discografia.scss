@@ -51,16 +51,21 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                font-family: Helvetica, sans-serif;
+                font-family: 'Jost', sans-serif;
                 font-size: 1rem;
                 font-weight: 700;
                 text-transform: uppercase;
                 transition: all 1s;
+                
+                a:hover {
+                    color: inherit;
+                }
             }
         }
 
         ol {
             padding-left: 2em;
+            text-transform: uppercase;
         }
     }
 }

@@ -44,7 +44,7 @@
 }
 
 
-/* MÓVILES PEQUEÑOS */
+/* MÓVILES */
 
 @media (min-width: 481px) and (max-width: 767px) {
     /* general */
@@ -158,14 +158,17 @@
     }
 
     /* discografia */
-    .discografia-lista__item {
-        margin-bottom: 5%;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
+    .discografia-lista {
 
-        ol {
-            padding-left: 0;
+        .discografia-lista__item {
+            margin-bottom: 5%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+    
+            ol {
+                padding-left: 0;
+            }
         }
     }
 
@@ -307,7 +310,7 @@
         flex-flow: column nowrap;
         align-items: center;
 
-        &__item {
+        .discografia-lista__item {
             margin-bottom: 5%;
             display: flex;
             flex-flow: column nowrap;
