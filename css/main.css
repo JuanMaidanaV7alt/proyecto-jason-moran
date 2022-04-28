@@ -34,14 +34,15 @@ a :hover {
   color: #ffffff;
 }
 
+/* contenedores */
 .grid-container {
   position: relative;
   height: 100vh;
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2.5fr 0.5fr;
-      grid-template-columns: 2.5fr 0.5fr;
+  -ms-grid-columns: 2.4fr 0.6fr;
+      grid-template-columns: 2.4fr 0.6fr;
   -ms-grid-rows: auto 80px auto auto;
       grid-template-rows: auto 80px auto auto;
   gap: 5px 5px;
@@ -62,6 +63,7 @@ a :hover {
   margin: auto;
 }
 
+/* contenido de página */
 .pageSection {
   width: auto;
   height: auto;
@@ -256,48 +258,53 @@ a :hover {
 }
 
 .aside .sidebar {
-  background-color: #11468f;
-  height: auto;
-  max-height: 500px;
-  border: 5px double rgba(0, 0, 0, 0.15);
-  border-radius: 15px 10px 10px 15px;
   position: -webkit-sticky;
   position: sticky;
   right: 0;
   top: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  max-height: 800px;
+}
+
+.aside .sidebar .fechas {
+  background-color: #11468f;
+  height: auto;
+  max-height: 500px;
+  margin-bottom: 1em;
+  border: 5px double rgba(0, 0, 0, 0.15);
+  border-radius: 15px 10px 10px 15px;
   text-align: justify;
   color: #ffffff;
   overflow: auto;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 }
 
-.aside .sidebar::-webkit-scrollbar {
+.aside .sidebar .fechas::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-.aside .sidebar::-webkit-scrollbar-thumb {
+.aside .sidebar .fechas::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 4px;
 }
 
-.aside .sidebar::-webkit-scrollbar-thumb:hover {
+.aside .sidebar .fechas::-webkit-scrollbar-thumb:hover {
   background: #b3b3b3;
   -webkit-box-shadow: 0 0 2px 1px #00000033;
           box-shadow: 0 0 2px 1px #00000033;
 }
 
-.aside .sidebar::-webkit-scrollbar-thumb:active {
+.aside .sidebar .fechas::-webkit-scrollbar-thumb:active {
   background-color: #999999;
 }
 
-.aside .sidebar h4 {
+.aside .sidebar .fechas h4 {
   text-align: center;
   padding-top: 1em;
 }
 
-.aside .sidebar ul {
+.aside .sidebar .fechas ul {
   line-height: 1.5em;
   list-style: inside;
   font-size: 0.8333rem;
@@ -305,7 +312,7 @@ a :hover {
   padding: 0.5em;
 }
 
-.aside .sidebar ul li {
+.aside .sidebar .fechas ul li {
   margin: 1em 0;
 }
 
@@ -394,24 +401,47 @@ a :hover {
 }
 
 .noticias .noticias__articulo--txt a {
-  font-weight: 300;
-  font-size: 0.9167rem;
-  color: inherit;
+  position: relative;
+  font-weight: 400;
+  font-size: 1rem;
+  color: currentColor;
+}
+
+.noticias .noticias__articulo--txt a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.noticias .noticias__articulo--txt a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .noticias .noticias__articulo--txt .noticias__articulo--titulo {
   font-size: 1.4792rem;
   font-weight: 800;
-  margin: 30px;
+  margin-bottom: 1rem;
 }
 
 .noticias .noticias__articulo--txt .noticias__articulo--cuerpo {
   font-style: italic;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
   text-align: justify;
-  color: #5f6c7b;
 }
 
 .noticias div .noticias__articulo--img {
@@ -822,6 +852,37 @@ a :hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  /* noticias */
+  .noticias .noticias__articulo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .noticias .noticias__articulo--txt a {
+    position: relative;
+  }
+  .noticias .noticias__articulo--txt a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transition: -webkit-transform 250ms ease-in;
+    transition: -webkit-transform 250ms ease-in;
+    transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+  }
+  .noticias .noticias__articulo--txt a:hover::after {
+    -webkit-transform: none;
+            transform: none;
+  }
   /* discografia */
   .discografia-lista .discografia-lista__item {
     margin-bottom: 5%;
@@ -982,6 +1043,30 @@ a :hover {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .noticias .noticias__articulo--txt a {
+    position: relative;
+  }
+  .noticias .noticias__articulo--txt a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transition: -webkit-transform 250ms ease-in;
+    transition: -webkit-transform 250ms ease-in;
+    transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+  }
+  .noticias .noticias__articulo--txt a:hover::after {
+    -webkit-transform: none;
+            transform: none;
   }
   /* discografia */
   .discografia-lista {

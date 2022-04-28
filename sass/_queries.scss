@@ -156,7 +156,22 @@
             }
         }
     }
+    
+    /* noticias */
+    .noticias {
 
+        & &__articulo {
+            flex-direction: column-reverse;
+
+            &--txt {
+    
+                a {
+                    @include linkAnimado(currentColor, none, none);
+                }
+            }
+        }
+    }
+    
     /* discografia */
     .discografia-lista {
 
@@ -301,6 +316,13 @@
 
         & &__articulo {
             flex-direction: column-reverse;
+
+            &--txt {
+    
+                a {
+                    @include linkAnimado(currentColor, none, none);
+                }
+            }
         }
     }
     

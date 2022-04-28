@@ -18,24 +18,24 @@
             margin-right: 36px;
 
             a {
-                font-weight: 300;
-                font-size: 0.9167rem;
-                color: inherit;
+                @include linkAnimado;
+                font-weight: 400;
+                font-size: 1rem;
+                color: currentColor;
             }
 
             .noticias__articulo--titulo {
                 font-size: 1.4792rem;
                 font-weight: 800;
-                margin: 30px;
+                margin-bottom:1rem;
             }
 
             .noticias__articulo--cuerpo {
                 font-style: italic;
                 font-size: 1rem;
-                font-weight: 500;
+                font-weight: 400;
                 line-height: 1.5;
                 text-align: justify;
-                color: #5f6c7b;
             }
         }
     }
