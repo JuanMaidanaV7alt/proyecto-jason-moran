@@ -156,6 +156,58 @@
             }
         }
     }
+
+    /* footer */
+    .footer {
+    
+        div {
+
+            .rrss {
+
+                @each $nombre in $redes {
+
+                    .rrss__item--#{$nombre} {
+                        
+                        margin: 0;
+                        overflow: visible;
+                        transition: none;
+        
+                        &::before {
+                            background: none;
+                            box-shadow: none;
+                        }
+        
+                        &:hover {
+        
+                            width: 3.75rem;
+
+                            a {
+                                background: none;
+                            }
+
+                            &::before {
+                                box-shadow: none;
+                                background: none;
+                            }
+                        }
+        
+                        a {
+        
+                            .fa-brands {
+        
+                                color: #fff;
+                            }
+                        }
+        
+                        span {
+        
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     /* noticias */
     .noticias {
@@ -311,6 +363,58 @@
         }
     }
 
+    /* footer */
+    .footer {
+    
+        div {
+
+            .rrss {
+
+                @each $nombre in $redes {
+
+                    .rrss__item--#{$nombre} {
+                        
+                        margin: 0;
+                        overflow: visible;
+                        transition: none;
+        
+                        &::before {
+                            background: none;
+                            box-shadow: none;
+                        }
+        
+                        &:hover {
+        
+                            width: 3.75rem;
+
+                            a {
+                                background: none;
+                            }
+
+                            &::before {
+                                box-shadow: none;
+                                background: none;
+                            }
+                        }
+        
+                        a {
+        
+                            .fa-brands {
+        
+                                color: #fff;
+                            }
+                        }
+        
+                        span {
+        
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     /* noticias */
     .noticias {
 

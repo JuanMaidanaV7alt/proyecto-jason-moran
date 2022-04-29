@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* VARIABLES */
+/* estilo barra de navegación (sidebar y body) */
 /* colores */
 /* MIXINS */
 /* general */
@@ -23,6 +24,26 @@ body {
   font-family: 'Jost', sans-serif;
   width: 100%;
   height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  -webkit-box-shadow: 0 0 2px 1px #00000033;
+          box-shadow: 0 0 2px 1px #00000033;
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
 }
 
 a {
@@ -237,26 +258,6 @@ a :hover {
   padding: 10em 0;
 }
 
-.aside::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.aside::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-.aside::-webkit-scrollbar-thumb:hover {
-  background: #b3b3b3;
-  -webkit-box-shadow: 0 0 2px 1px #00000033;
-          box-shadow: 0 0 2px 1px #00000033;
-}
-
-.aside::-webkit-scrollbar-thumb:active {
-  background-color: #999999;
-}
-
 .aside .sidebar {
   position: -webkit-sticky;
   position: sticky;
@@ -316,6 +317,63 @@ a :hover {
   margin: 1em 0;
 }
 
+/* PLACEHOLDER A EXTENDER */
+.footer div .rrss .rrss__item--spotify, .footer div .rrss .rrss__item--bandcamp, .footer div .rrss .rrss__item--instagram, .footer div .rrss .rrss__item--facebook, .footer div .rrss .rrss__item--twitter {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin: 0px 16px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  color: #000;
+  letter-spacing: 5px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+}
+
+.footer div .rrss .rrss__item--spotify:hover, .footer div .rrss .rrss__item--bandcamp:hover, .footer div .rrss .rrss__item--instagram:hover, .footer div .rrss .rrss__item--facebook:hover, .footer div .rrss .rrss__item--twitter:hover {
+  width: 13rem;
+}
+
+.footer div .rrss .rrss__item--spotify:hover a i, .footer div .rrss .rrss__item--bandcamp:hover a i, .footer div .rrss .rrss__item--instagram:hover a i, .footer div .rrss .rrss__item--facebook:hover a i, .footer div .rrss .rrss__item--twitter:hover a i {
+  color: #fff;
+}
+
+.footer div .rrss .rrss__item--spotify:hover::before, .footer div .rrss .rrss__item--bandcamp:hover::before, .footer div .rrss .rrss__item--instagram:hover::before, .footer div .rrss .rrss__item--facebook:hover::before, .footer div .rrss .rrss__item--twitter:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: radial-gradient(circle, #d7e1ec 0%, #11468f 100%);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: -1;
+}
+
+.footer div .rrss .rrss__item--spotify a, .footer div .rrss .rrss__item--bandcamp a, .footer div .rrss .rrss__item--instagram a, .footer div .rrss .rrss__item--facebook a, .footer div .rrss .rrss__item--twitter a {
+  display: inline-block;
+  width: 3.75rem;
+  height: 3.75rem;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 3.75rem;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+}
+
+.footer div .rrss .rrss__item--spotify a i, .footer div .rrss .rrss__item--bandcamp a i, .footer div .rrss .rrss__item--instagram a i, .footer div .rrss .rrss__item--facebook a i, .footer div .rrss .rrss__item--twitter a i {
+  font-size: 1.563rem;
+  line-height: 3.75rem;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+  color: #f5deb3;
+}
+
 /* FOOTER */
 .footer {
   left: 0;
@@ -338,7 +396,7 @@ a :hover {
   height: inherit;
 }
 
-.footer div .footer__rrss {
+.footer div .rrss {
   font-weight: 600;
   width: -webkit-fill-available;
   width: 100%;
@@ -352,13 +410,28 @@ a :hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  color: #ffffff;
   list-style: none;
 }
 
-.footer div .footer__rrss .footer__rrss--item {
-  margin: 0px 16px;
-  letter-spacing: 5px;
+.footer div .rrss .rrss__item--spotify:hover a {
+  background: #1ed760;
+}
+
+.footer div .rrss .rrss__item--bandcamp:hover a {
+  background: #1da0c3;
+}
+
+.footer div .rrss .rrss__item--instagram:hover a {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.footer div .rrss .rrss__item--facebook:hover a {
+  background: #0078f7;
+}
+
+.footer div .rrss .rrss__item--twitter:hover a {
+  background: #00acee;
 }
 
 /* SECCIONES PARTICULARES */
@@ -852,6 +925,27 @@ a :hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  /* footer */
+  .footer div .rrss__item {
+    margin: 0;
+    overflow: visible;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .footer div .rrss__item::before {
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .footer div .rrss__item:hover {
+    width: 3.75rem;
+  }
+  .footer div .rrss__item a .fa-brands {
+    color: #fff;
+  }
+  .footer div .rrss__item span {
+    display: none;
+  }
   /* noticias */
   .noticias .noticias__articulo {
     -webkit-box-orient: vertical;
@@ -1036,6 +1130,27 @@ a :hover {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+  /* footer */
+  .footer div .rrss__item {
+    margin: 0;
+    overflow: visible;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .footer div .rrss__item::before {
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .footer div .rrss__item:hover {
+    width: 3.75rem;
+  }
+  .footer div .rrss__item a .fa-brands {
+    color: #fff;
+  }
+  .footer div .rrss__item span {
+    display: none;
   }
   /* noticias */
   .noticias .noticias__articulo {
