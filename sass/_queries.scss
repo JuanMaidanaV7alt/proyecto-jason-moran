@@ -212,17 +212,17 @@
     /* noticias */
     .noticias {
 
-        & &__articulo {
+        & &__articulo, & &__articulo:nth-child(odd) {
             flex-direction: column-reverse;
 
-            &--txt {
+            .noticias__articulo--txt {
     
                 a {
                     @include linkAnimado(currentColor, none, none);
                 }
             }
-            
-            &--img {
+
+            .noticias__articulo--img {
 
                 margin-bottom: 2em;
                 box-shadow: map-get($sombreados, multimedia);
@@ -424,21 +424,22 @@
     /* noticias */
     .noticias {
 
-        & &__articulo {
-
+        & &__articulo, & &__articulo:nth-child(odd) {
             flex-direction: column-reverse;
 
-            &--txt {
+            .noticias__articulo--txt {
     
                 a {
                     @include linkAnimado(currentColor, none, none);
                 }
             }
-            &--img {
+
+            .noticias__articulo--img {
 
                 margin-bottom: 2em;
                 box-shadow: map-get($sombreados, multimedia);
             }
+
         }
     }
     
