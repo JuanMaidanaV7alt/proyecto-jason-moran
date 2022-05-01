@@ -17,20 +17,21 @@ body {
     height: 100%;
 
     &::-webkit-scrollbar {
-        width: 20px;
+        width: 15px;
+        height: 15px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: map-get($scrollbar, $thumb);
+        background: map-get($scrollbar, thumb);
         border-radius: 4px;
 
         &:hover {
-            background: map-get($scrollbar, $hover--bg);
-            box-shadow: map-get($scrollbar, $hover--shadow);
+            background: map-get($scrollbar, hover--bg);
+            box-shadow:map-get($scrollbar, hover--shadow);
         }
 
         &:active {
-            background-color: map-get($scrollbar, $active);
+            background-color: map-get($scrollbar, active);
         }
     }
 

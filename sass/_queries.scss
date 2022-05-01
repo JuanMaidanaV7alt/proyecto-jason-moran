@@ -54,7 +54,7 @@
 
     /* header */
     .navbar {
-        box-shadow: $sombreadoHeaderChico;
+        box-shadow: map-get($sombreados, headerChico);
         opacity: 1;
         height: 82px;
         position: fixed;
@@ -158,56 +158,56 @@
     }
 
     /* footer */
-    .footer {
+
+    %rrss__item {
+
+        margin: 0;
+        overflow: visible;
+        transition: none;
     
-        div {
+        &:hover {
+            width: 3.75rem;
+    
+            a {
+                
+                background: none;
 
-            .rrss {
-
-                @each $nombre in $redes {
-
-                    .rrss__item--#{$nombre} {
-                        
-                        margin: 0;
-                        overflow: visible;
-                        transition: none;
-        
-                        &::before {
-                            background: none;
-                            box-shadow: none;
-                        }
-        
-                        &:hover {
-        
-                            width: 3.75rem;
-
-                            a {
-                                background: none;
-                            }
-
-                            &::before {
-                                box-shadow: none;
-                                background: none;
-                            }
-                        }
-        
-                        a {
-        
-                            .fa-brands {
-        
-                                color: #fff;
-                            }
-                        }
-        
-                        span {
-        
-                            display: none;
-                        }
-                    }
+                i {
+                    color: #fff;
                 }
             }
+            
+            &::before {
+    
+                content: "";
+                background: none;
+                box-shadow: none;    
+            }
+        }
+    
+        a {
+            display: inline-block;
+            width: 3.75rem;
+            height: 3.75rem;
+            text-align: center;
+            border-radius: 50%;
+            box-sizing: border-box;
+            line-height: 3.75rem;
+            transition: none;
+    
+            i {
+                font-size: 1.563rem;
+                line-height: 3.75rem;
+                transition: none;
+                color: #fff;
+            }
+        }
+        span {
+
+            display: none;
         }
     }
+    
     
     /* noticias */
     .noticias {
@@ -221,6 +221,13 @@
                     @include linkAnimado(currentColor, none, none);
                 }
             }
+            
+            &--img {
+
+                margin-bottom: 2em;
+                box-shadow: map-get($sombreados, multimedia);
+            }
+
         }
     }
     
@@ -257,7 +264,7 @@
 
     /* header */
     .navbar {
-        box-shadow: $sombreadoHeaderChico;
+        box-shadow: map-get($sombreados, headerChico);
         height: 68px;
         opacity: 1;
         position: fixed;
@@ -364,54 +371,53 @@
     }
 
     /* footer */
-    .footer {
+
+    %rrss__item {
+
+        margin: 0;
+        overflow: visible;
+        transition: none;
     
-        div {
+        &:hover {
+            width: 3.75rem;
+    
+            a {
+                
+                background: none;
 
-            .rrss {
-
-                @each $nombre in $redes {
-
-                    .rrss__item--#{$nombre} {
-                        
-                        margin: 0;
-                        overflow: visible;
-                        transition: none;
-        
-                        &::before {
-                            background: none;
-                            box-shadow: none;
-                        }
-        
-                        &:hover {
-        
-                            width: 3.75rem;
-
-                            a {
-                                background: none;
-                            }
-
-                            &::before {
-                                box-shadow: none;
-                                background: none;
-                            }
-                        }
-        
-                        a {
-        
-                            .fa-brands {
-        
-                                color: #fff;
-                            }
-                        }
-        
-                        span {
-        
-                            display: none;
-                        }
-                    }
+                i {
+                    color: #fff;
                 }
             }
+            
+            &::before {
+    
+                content: "";
+                background: none;
+                box-shadow: none;    
+            }
+        }
+    
+        a {
+            display: inline-block;
+            width: 3.75rem;
+            height: 3.75rem;
+            text-align: center;
+            border-radius: 50%;
+            box-sizing: border-box;
+            line-height: 3.75rem;
+            transition: none;
+    
+            i {
+                font-size: 1.563rem;
+                line-height: 3.75rem;
+                transition: none;
+                color: #fff;
+            }
+        }
+        span {
+
+            display: none;
         }
     }
     
@@ -419,6 +425,7 @@
     .noticias {
 
         & &__articulo {
+
             flex-direction: column-reverse;
 
             &--txt {
@@ -426,6 +433,11 @@
                 a {
                     @include linkAnimado(currentColor, none, none);
                 }
+            }
+            &--img {
+
+                margin-bottom: 2em;
+                box-shadow: map-get($sombreados, multimedia);
             }
         }
     }

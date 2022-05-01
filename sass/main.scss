@@ -3,7 +3,7 @@
 @import "mixins";
 
 
-/* ELEMENTOS COMUNES A TODAS LAS PÁGINAS */
+// ELEMENTOS COMUNES A TODAS LAS PÁGINAS
 
 @import "generales";
 
@@ -14,7 +14,7 @@
 @import "footer";
 
 
-/* SECCIONES PARTICULARES */
+// SECCIONES PARTICULARES
 
 @import "noticias";
 
@@ -26,6 +26,6 @@
 
 @import "galeria";
 
-/* MEDIA QUERIES */
+// MEDIA QUERIES
 
 @import "queries";
