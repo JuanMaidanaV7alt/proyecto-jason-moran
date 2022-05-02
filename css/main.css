@@ -1,4 +1,67 @@
 @charset "UTF-8";
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+}
+
 /* CÓDIGO GENERAL */
 * {
   margin: 0;
@@ -641,7 +704,7 @@ a :hover {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 30%;
+  width: 50%;
   position: relative;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
@@ -674,6 +737,14 @@ a :hover {
   opacity: .85;
 }
 
+.discografia-lista .discografia-lista__item .img-container:hover + ol {
+  -webkit-animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 750ms forwards;
+          animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 750ms forwards;
+  padding-left: 2em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
 .discografia-lista .discografia-lista__item .img-container .btn {
   display: none;
   position: absolute;
@@ -692,7 +763,9 @@ a :hover {
 }
 
 .discografia-lista .discografia-lista__item ol {
-  padding-left: 2em;
+  opacity: 0;
+  -webkit-animation: fadeOut cubic-bezier(0.3, -0.01, 0.49, 1) 750ms forwards;
+          animation: fadeOut cubic-bezier(0.3, -0.01, 0.49, 1) 750ms forwards;
   text-transform: uppercase;
 }
 

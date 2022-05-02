@@ -1,4 +1,5 @@
 /* DISCOGRAFIA */
+
 .discografia-lista {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -17,7 +18,8 @@
 
         .img-container {
             height: fit-content;
-            width: 30%;
+            // ORIGINAL width: 30%;
+            width: 50%;
             position: relative;
             transition: transform .5s;
 
@@ -44,6 +46,13 @@
                 .discografia-lista__img {
                     opacity: .85;
                 }
+
+                + ol {
+                    animation: fadeIn cubic-bezier(.3, -0.01, .49, 1) 750ms forwards;
+                    padding-left: 2em;
+                    text-transform: uppercase;
+                    opacity: 0;
+                }
             }
 
             .btn {
@@ -64,8 +73,10 @@
         }
 
         ol {
-            padding-left: 2em;
+            opacity: 0;
+            animation: fadeOut cubic-bezier(.3, -0.01, .49, 1) 750ms forwards;
             text-transform: uppercase;
         }
+
     }
 }
