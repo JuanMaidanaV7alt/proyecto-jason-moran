@@ -32,6 +32,7 @@
             }
 
             &:hover {
+                
                 transform: scale(1.2);
 
                 .btn {
@@ -49,6 +50,7 @@
 
                 + ol {
                     animation: fadeIn cubic-bezier(.3, -0.01, .49, 1) 750ms forwards;
+                    animation-delay: 300ms;
                     padding-left: 2em;
                     text-transform: uppercase;
                     opacity: 0;
@@ -74,8 +76,9 @@
 
         ol {
             opacity: 0;
-            animation: fadeOut cubic-bezier(.3, -0.01, .49, 1) 750ms forwards;
+            animation: fadeOut cubic-bezier(.3, -0.01, .49, 1) 500ms forwards;
             text-transform: uppercase;
+            padding-bottom: 2em;
         }
 
     }

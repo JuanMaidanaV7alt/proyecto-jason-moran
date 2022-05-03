@@ -49,8 +49,10 @@ a {
 /* contenedores */
 .grid-container {
     position: relative;
-    height: 100vh;
+    height: auto;
     width: 100%;
+    background-image: url(../img/background.jpg);
+    background-origin: border-box;
     display: grid;
     grid-template-columns: 2.4fr 0.6fr;
     grid-template-rows: auto 80px auto auto;
