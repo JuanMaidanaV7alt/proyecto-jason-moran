@@ -238,6 +238,10 @@
 
             .img-container {
 
+                padding-bottom: 3em;
+                margin-bottom: 1em;
+                position: relative;
+
                 &:hover {
 
                     transform: none;
@@ -245,18 +249,22 @@
                     .btn {
 
                         display: inline;
-                        -webkit-transform: translate(-50%, -50%);
-                        -moz-transform: translate(-50%, -50%);
-                        -o-transform: translate(-50%, -50%);
-                        -ms-transform: translate(-50%, -50%);
-                        transform: translate(-50%, -50%);
+                        position: absolute;
+                        left: 22%;
+                        right: 22%;
+                        bottom: -3%;
+                        top: 85%;
+                        -webkit-transform: translate(0%, 0%);
+                        -moz-transform: translate(0%, 0%);
+                        -o-transform: translate(0%, 0%);
+                        -ms-transform: translate(0%, 0%);
+                        transform: translate(0%, 0%);
                     }
 
                     + ol {
 
                         animation: none;
-                        padding-left: 0;
-                        padding-bottom: 1em;
+                        padding: 1em 0;
                         opacity: 1;
                     }
                 }
@@ -264,17 +272,21 @@
                 .btn {
 
                     display: inline;
-                    -webkit-transform: translate(-50%, -50%);
-                    -moz-transform: translate(-50%, -50%);
-                    -o-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
+                    position: absolute;
+                    left: 22%;
+                    right: 22%;
+                    bottom: -3%;
+                    top: 85%;
+                    -webkit-transform: translate(0%, 0%);
+                    -moz-transform: translate(0%, 0%);
+                    -o-transform: translate(0%, 0%);
+                    -ms-transform: translate(0%, 0%);
+                    transform: translate(0%, 0%);
+            
                 }
             }
-    
             ol {
-                padding-left: 0;
-                padding-bottom: 1em;
+                padding: 1em 0;
                 opacity: 1;
                 transition: none;
                 animation: none;
@@ -513,8 +525,9 @@
             }
 
             .img-container {
-                width: 54%;
-                margin-bottom: 5%;
+                margin-bottom: 1em;
+                padding-bottom: 3em;
+                position: relative;
 
                 &:hover {
                     transform: none;
@@ -522,11 +535,16 @@
                     .btn {
     
                         display: inline;
-                        -webkit-transform: translate(-50%, -50%);
-                        -moz-transform: translate(-50%, -50%);
-                        -o-transform: translate(-50%, -50%);
-                        -ms-transform: translate(-50%, -50%);
-                        transform: translate(-50%, -50%);
+                        position: absolute;
+                        left: 22%;
+                        right: 22%;
+                        bottom: -3%;
+                        top: 85%;
+                        -webkit-transform: translate(0%, 0%);
+                        -moz-transform: translate(0%, 0%);
+                        -o-transform: translate(0%, 0%);
+                        -ms-transform: translate(0%, 0%);
+                        transform: translate(0%, 0%);
                     }
 
                     + ol {
@@ -542,11 +560,16 @@
                 .btn {
     
                     display: inline;
-                    -webkit-transform: translate(-50%, -50%);
-                    -moz-transform: translate(-50%, -50%);
-                    -o-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
+                    position: absolute;
+                    top: 85%;
+                    right: 22%;
+                    bottom: -3%;
+                    left: 22%;
+                    -webkit-transform: translate(0%, 0%);
+                    -moz-transform: translate(0%, 0%);
+                    -o-transform: translate(0%, 0%);
+                    -ms-transform: translate(0%, 0%);
+                    transform: translate(0%, 0%);
                 }
             }
 

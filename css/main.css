@@ -712,7 +712,9 @@ a :hover {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
@@ -721,8 +723,8 @@ a :hover {
 }
 
 .discografia-lista .discografia-lista__item .img-container .discografia-lista__img {
-  height: auto;
-  width: 100%;
+  height: 180px;
+  width: 180px;
   margin-right: 0.5em;
   -webkit-box-shadow: 2px 7px 11px 1px #00000059;
           box-shadow: 2px 7px 11px 1px #00000059;
@@ -731,8 +733,8 @@ a :hover {
 }
 
 .discografia-lista .discografia-lista__item .img-container:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.11);
+          transform: scale(1.11);
 }
 
 .discografia-lista .discografia-lista__item .img-container:hover .btn {
@@ -1151,30 +1153,43 @@ a :hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .discografia-lista .discografia-lista__item .img-container {
+    padding-bottom: 3em;
+    margin-bottom: 1em;
+    position: relative;
+  }
   .discografia-lista .discografia-lista__item .img-container:hover {
     -webkit-transform: none;
             transform: none;
   }
   .discografia-lista .discografia-lista__item .img-container:hover .btn {
     display: inline;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 22%;
+    right: 22%;
+    bottom: -3%;
+    top: 85%;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
   .discografia-lista .discografia-lista__item .img-container:hover + ol {
     -webkit-animation: none;
             animation: none;
-    padding-left: 0;
-    padding-bottom: 1em;
+    padding: 1em 0;
     opacity: 1;
   }
   .discografia-lista .discografia-lista__item .img-container .btn {
     display: inline;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 22%;
+    right: 22%;
+    bottom: -3%;
+    top: 85%;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
   .discografia-lista .discografia-lista__item ol {
-    padding-left: 0;
-    padding-bottom: 1em;
+    padding: 1em 0;
     opacity: 1;
     -webkit-transition: none;
     transition: none;
@@ -1445,8 +1460,9 @@ a :hover {
     padding-left: 0;
   }
   .discografia-lista .discografia-lista__item .img-container {
-    width: 54%;
-    margin-bottom: 5%;
+    margin-bottom: 1em;
+    padding-bottom: 3em;
+    position: relative;
   }
   .discografia-lista .discografia-lista__item .img-container:hover {
     -webkit-transform: none;
@@ -1454,8 +1470,13 @@ a :hover {
   }
   .discografia-lista .discografia-lista__item .img-container:hover .btn {
     display: inline;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 22%;
+    right: 22%;
+    bottom: -3%;
+    top: 85%;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
   .discografia-lista .discografia-lista__item .img-container:hover + ol {
     padding: 1em 4em;
@@ -1468,8 +1489,13 @@ a :hover {
   }
   .discografia-lista .discografia-lista__item .img-container .btn {
     display: inline;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 85%;
+    right: 22%;
+    bottom: -3%;
+    left: 22%;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
   .discografia-lista .discografia-lista__item ol {
     padding: 1em 4em;
