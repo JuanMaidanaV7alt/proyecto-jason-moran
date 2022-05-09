@@ -41,11 +41,11 @@
             }
 
             &--color1 {
-                color: $colorAzul;
+                color: map-get($colores, azul);
             }
 
             &--color2 {
-                color: $colorRojo;
+                color: map-get($colores, rojo);
             }
         }
 
@@ -78,7 +78,7 @@
                         transition: color 0.3s ease-in-out;
 
                         &:hover {
-                            color: $colorRojo;
+                            color: map-get($colores, rojo);
                             transition: color 0.3s ease-in-out;
                         }
                     }

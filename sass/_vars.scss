@@ -16,8 +16,13 @@ $scrollbar: (
 );
 
 // colores
-$colorRojo: #da1212;
-$colorAzul: #11468f; 
+$colores: (
+    'rojo': #da1212,
+    'azul': #11468f,
+    'blanco': #fff,
+    'crema': #f5deb3,
+    
+);
 
 $redes: (
     'spotify': #1ed760,

@@ -360,7 +360,7 @@ a :hover {
   background-color: #999999;
 }
 
-.aside .sidebar .fechas h4 {
+.aside .sidebar .fechas h2 {
   text-align: center;
   padding-top: 1em;
 }
@@ -407,8 +407,8 @@ a :hover {
   height: 100%;
   border-radius: 50px;
   background: radial-gradient(circle, #d7e1ec 0%, #11468f 100%);
-  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 10px #0000001a;
+          box-shadow: 0 10px 10px #0000001a;
   position: absolute;
   z-index: -1;
 }
@@ -436,20 +436,70 @@ a :hover {
 
 /* FOOTER */
 .footer {
-  left: 0;
   background-color: #11468f;
+  color: #fff;
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
+  height: auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  position: absolute;
-  bottom: 0;
-  height: 6rem;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: footer;
+}
+
+.footer .borde-inf {
+  padding: 1.5em 0;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #fff;
+}
+
+.footer .borde-inf > .row h3 {
+  font-weight: 600;
+}
+
+.footer .borde-inf > .row ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer .borde-inf > .row ul li {
+  margin: .3em 0;
+}
+
+.footer .borde-inf > .row ul li a {
+  position: relative;
+  color: currentColor;
+  font-weight: 400;
+}
+
+.footer .borde-inf > .row ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.footer .borde-inf > .row ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.footer .borde-inf > .row ul li a:hover {
+  color: currentColor;
 }
 
 .footer div {
@@ -470,7 +520,7 @@ a :hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffffff;
+  color: #f5deb3;
   list-style: none;
 }
 
@@ -492,6 +542,10 @@ a :hover {
 
 .footer div .rrss .rrss__item--twitter:hover a {
   background: #00acee;
+}
+
+.footer .copyright > p {
+  color: #fff;
 }
 
 /* NOTICIAS */

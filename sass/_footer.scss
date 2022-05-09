@@ -19,7 +19,7 @@
         a {
 
             i {
-                color: #fff;
+                color: map-get($colores, blanco);
             }
 
         }
@@ -31,7 +31,7 @@
             height: 100%;
             border-radius: 50px;
             background: radial-gradient(circle, #d7e1ec 0%, #11468f 100%);
-            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 10px #0000001a;
             position: absolute;
             z-index: -1;
 
@@ -52,7 +52,7 @@
             font-size: 1.563rem;
             line-height: 3.75rem;
             transition: all .4s ease-out;
-            color: #f5deb3;
+            color: map-get($colores, crema);
         }
     }
 }
@@ -60,16 +60,50 @@
 /* FOOTER */
 
 .footer {
-    left: 0;
-    background-color: $colorAzul;
+    background-color: map-get($colores, azul);
+    color: map-get($colores, blanco);
     width: -moz-available;
     width: -webkit-fill-available;
     width: fill-available;
+    height: auto;
     flex-shrink: 0;
-    position: absolute;
-    bottom: 0;
-    height: 6rem;
     grid-area: footer;
+
+    .borde-inf {
+
+        padding: 1.5em 0;
+        margin-bottom: 1.5em;
+        border-bottom:1px solid map-get($colores, blanco); 
+
+        > .row {
+
+    
+            h3 {
+                font-weight: 600;
+            }
+
+            ul {
+
+                list-style: none;
+                padding-left: 0;
+
+                li {
+
+                    margin: .3em 0;
+                    
+                    a {
+                        @include linkAnimado;
+                        color: currentColor;
+                        font-weight: 400;
+        
+                        &:hover {
+                            color: currentColor;
+                        }
+                    }
+                }
+            } 
+        }
+    }
 
     div {
         height: inherit;
@@ -83,7 +117,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            color: #ffffff;
+            color: map-get($colores, crema);
             list-style: none;
 
 
@@ -100,5 +134,8 @@
                 }
             }            
         }
+    }
+    .copyright > p {
+        color: map-get($colores, blanco) ;
     }
 }
