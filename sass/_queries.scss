@@ -7,6 +7,7 @@
     /* general */
     .grid-container {
         position: relative;
+        max-width: 100%;
         height: auto;
         display: grid;
         grid-template-columns: auto;
@@ -21,6 +22,12 @@
     /* header */
     .navbar {
         height: auto;
+
+        .navbar-container .navbar-collapse .navbar-nav .nav-item {
+            
+            margin-left: 0.75rem;
+            font-size: 1.15rem;
+        }
     }
 
     .menu-items li {
